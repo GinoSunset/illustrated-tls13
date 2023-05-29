@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 	if (ivlen != gcm_ivlen)
 		die("Incorrect IV length, expected 12 bytes");
 	if (taglen != gcm_taglen)
-		die("Incorrect IV length, expected 16 bytes");
+		die("Incorrect tag length, expected 16 bytes");
 	build_iv(iv, seq);
 
 	EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
